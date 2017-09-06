@@ -1,0 +1,18 @@
+#N canvas 949 77 450 342 10;
+#X obj 127 126 adc~;
+#X obj 140 257 dac~;
+#X obj 176 191 *~;
+#X obj 267 18 receive fromGUI;
+#X obj 267 50 list trim;
+#X floatatom 267 129 5 0 0 0 - - -, f 5;
+#X obj 93 192 *~;
+#X obj 267 86 route /VolumeSlider;
+#X connect 0 0 6 0;
+#X connect 0 1 2 0;
+#X connect 2 0 1 1;
+#X connect 3 0 4 0;
+#X connect 4 0 7 0;
+#X connect 5 0 2 1;
+#X connect 5 0 6 1;
+#X connect 6 0 1 0;
+#X connect 7 0 5 0;
